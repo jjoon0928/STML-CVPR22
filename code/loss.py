@@ -46,7 +46,7 @@ class RC_STML(nn.Module):
             s_emb = F.normalize(s_emb)
         t_emb = F.normalize(t_emb)
 
-        N = len(s_emb)        
+        N = len(s_emb)
         S_dist = torch.cdist(s_emb, s_emb)
         S_dist = S_dist / S_dist.mean(1, keepdim=True)
         
